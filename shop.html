@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Our Caps — Podcaps</title>
+<meta name="description" content="Browse the archived Podcaps collection — embroidered NFC caps for podcast lovers. No backend, no payments: checkout emails your order to caps@pola.berlin.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="archive-banner">
+  This shop is archived — there's no payment processing here. Checkout opens an email to <a href="mailto:caps@pola.berlin">caps@pola.berlin</a> with your order.
+</div>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html">Podcaps</a>
+    <nav class="nav-links">
+      <a href="index.html#story">Our Story</a>
+      <a href="shop.html">Our Caps</a>
+      <a class="cart-pill" href="#cart">Cart (<span data-cart-count>0</span>)</a>
+    </nav>
+  </div>
+</header>
+
+<section class="shop-header">
+  <div class="wrap">
+    <h1>Our Caps</h1>
+    <p>Embroidered NFC caps by Pola.Berlin. Tap one with your phone for a podcast recommendation from the Oh My Pod! newsletter.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap product-grid">
+
+    <article class="product-card">
+      <a href="products/podcast-guest.html"><img src="images/products/podcast-guest.jpg" alt="podcast guest cap"></a>
+      <div class="card-body">
+        <h3><a href="products/podcast-guest.html">podcast guest</a></h3>
+        <div class="price">€39,00</div>
+        <p class="tagline">For people who get invited on podcasts — or wish they did.</p>
+        <div class="card-actions">
+          <a class="btn secondary" href="products/podcast-guest.html">Details</a>
+          <button class="btn" data-add-to-cart data-slug="podcast-guest" data-name="podcast guest" data-price="39.00">Add to cart</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <a href="products/true-crime.html"><img src="images/products/true-crime.jpg" alt="true crime cap"></a>
+      <div class="card-body">
+        <h3><a href="products/true-crime.html">true crime</a></h3>
+        <div class="price">€39,00</div>
+        <p class="tagline">Du stehst einfach auf den darken Scheiß.</p>
+        <div class="card-actions">
+          <a class="btn secondary" href="products/true-crime.html">Details</a>
+          <button class="btn" data-add-to-cart data-slug="true-crime" data-name="true crime" data-price="39.00">Add to cart</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <a href="products/listening.html"><img src="images/products/listening.jpg" alt="listening cap"></a>
+      <div class="card-body">
+        <h3><a href="products/listening.html">listening</a></h3>
+        <div class="price">€39,00</div>
+        <p class="tagline">Eine Kappe wie ein Ruheabteil.</p>
+        <div class="card-actions">
+          <a class="btn secondary" href="products/listening.html">Details</a>
+          <button class="btn" data-add-to-cart data-slug="listening" data-name="listening" data-price="39.00">Add to cart</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <a href="products/doener-drei-euro.html"><img src="images/products/doener-drei-euro.jpg" alt="döner drei euro cap"></a>
+      <div class="card-body">
+        <h3><a href="products/doener-drei-euro.html">döner drei euro</a></h3>
+        <div class="price">€33,33</div>
+        <p class="tagline">A tribute to — or a jab at — your local döner price.</p>
+        <div class="card-actions">
+          <a class="btn secondary" href="products/doener-drei-euro.html">Details</a>
+          <button class="btn" data-add-to-cart data-slug="doener-drei-euro" data-name="döner drei euro" data-price="33.33">Add to cart</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <a href="products/love-stories.html"><img src="images/products/love-stories.jpg" alt="love stories cap"></a>
+      <div class="card-body">
+        <h3><a href="products/love-stories.html">love stories</a></h3>
+        <div class="price">€39,00</div>
+        <p class="tagline">Mit dieser Kappe findest du Liebesgeschichten. Du bist ein verdammter Amor damit.</p>
+        <div class="card-actions">
+          <a class="btn secondary" href="products/love-stories.html">Details</a>
+          <button class="btn" data-add-to-cart data-slug="love-stories" data-name="love stories" data-price="39.00">Add to cart</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <a href="products/speed-1-5x.html"><img src="images/products/speed-1-5x.jpg" alt="1.5x cap"></a>
+      <div class="card-body">
+        <h3><a href="products/speed-1-5x.html">1.5x</a></h3>
+        <div class="price">€39,00</div>
+        <p class="tagline">For people in a hurry — and podcast producers.</p>
+        <div class="card-actions">
+          <a class="btn secondary" href="products/speed-1-5x.html">Details</a>
+          <button class="btn" data-add-to-cart data-slug="speed-1-5x" data-name="1.5x" data-price="39.00">Add to cart</button>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section id="cart">
+  <div class="wrap">
+    <div class="cart-panel">
+      <h2>Your cart</h2>
+      <div id="cart-items"></div>
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cart-total">€0,00</span>
+      </div>
+      <button class="btn" id="checkout-btn" style="width:100%;" disabled>Checkout via email</button>
+      <p class="checkout-note">
+        There's no payment processing here anymore. "Checkout" opens your email app with the order
+        pre-filled, addressed to <a href="mailto:caps@pola.berlin">caps@pola.berlin</a> — just add your
+        shipping details and hit send.
+      </p>
+      <details class="order-fallback">
+        <summary>Email app didn't open? Copy this order instead</summary>
+        <pre id="order-fallback-text"></pre>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="imprint">
+      Podcaps was made by Yannic Hannebohn, c/o Treibende Kraft / Pola.Berlin,
+      Turmstraße 10, 10559 Berlin, Germany. VAT ID DE137004367.<br>
+      Questions or old orders: <a href="mailto:caps@pola.berlin">caps@pola.berlin</a>
+    </p>
+  </div>
+</footer>
+
+<script src="js/cart.js"></script>
+</body>
+</html>
