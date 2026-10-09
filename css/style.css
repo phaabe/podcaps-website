@@ -1,9 +1,46 @@
+@font-face {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("../fonts/playfair-latin-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/playfair-latin-italic-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Marcellus";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/marcellus-latin-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("../fonts/jost-latin.woff2") format("woff2");
+}
+
 :root {
-  --cream: #f7f2e9;
-  --ink: #1b1b1b;
-  --accent: #ff5a36;
-  --line: #e3dbc9;
+  /* real brand colors, pulled from podcaps.de's own stylesheet */
+  --cream: #fdf1ec;
+  --ink: #171412;
+  --accent: #ff8044;
+  --accent-soft: #fe9361;
+  --line: #f0dccb;
   --muted: #6b6456;
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-accent: "Marcellus", Georgia, serif;
+  --font-button: "Jost", "Futura", "Helvetica Neue", sans-serif;
 }
 
 * {
@@ -57,16 +94,20 @@ img, video {
 }
 
 .logo {
-  font-weight: 800;
+  font-family: var(--font-accent);
+  font-weight: 400;
   letter-spacing: 0.02em;
-  font-size: 1.15rem;
+  font-size: 1.3rem;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
   gap: 28px;
+  font-family: var(--font-button);
   font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 .nav-links a:hover {
@@ -78,19 +119,6 @@ img, video {
   border-radius: 999px;
   padding: 6px 14px;
   font-weight: 600;
-}
-
-.archive-banner {
-  background: var(--ink);
-  color: var(--cream);
-  text-align: center;
-  font-size: 0.85rem;
-  padding: 8px 16px;
-  letter-spacing: 0.02em;
-}
-
-.archive-banner a {
-  text-decoration: underline;
 }
 
 /* ---------- sections ---------- */
@@ -110,6 +138,8 @@ section:last-of-type {
 }
 
 .hero h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
   font-size: clamp(2.4rem, 6vw, 4.5rem);
   margin: 0 0 24px;
   letter-spacing: -0.01em;
@@ -126,11 +156,13 @@ section:last-of-type {
   color: var(--cream);
   padding: 14px 32px;
   border-radius: 999px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
+  font-family: var(--font-button);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
   border: none;
   cursor: pointer;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 .btn:hover {
@@ -158,6 +190,9 @@ section:last-of-type {
 }
 
 .highlight h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-style: italic;
   font-size: clamp(1.8rem, 4vw, 2.8rem);
   margin-bottom: 40px;
 }
@@ -183,9 +218,11 @@ section:last-of-type {
 }
 
 .season-banner h2 {
+  font-family: var(--font-button);
+  font-weight: 600;
   font-size: clamp(1.6rem, 4vw, 2.4rem);
   margin: 0 0 24px;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.08em;
 }
 
 .season-banner .btn {
@@ -193,18 +230,28 @@ section:last-of-type {
 }
 
 .value-prop {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
+  gap: 30px;
 }
 
 .value-prop img {
   border-radius: 12px;
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  background: #fffdf8;
+  padding: 24px;
 }
 
 .value-prop p {
-  font-size: 1.3rem;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  max-width: 560px;
 }
 
 .partnership {
@@ -212,6 +259,7 @@ section:last-of-type {
 }
 
 .partnership p {
+  font-family: var(--font-button);
   color: var(--muted);
   margin-bottom: 30px;
   text-transform: uppercase;
@@ -245,8 +293,10 @@ footer.site-footer img {
 }
 
 .footer-tagline {
-  font-weight: 800;
-  letter-spacing: 0.08em;
+  font-family: var(--font-accent);
+  font-weight: 400;
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
   margin-bottom: 30px;
 }
 
@@ -292,10 +342,32 @@ footer.site-footer img {
   flex-direction: column;
 }
 
-.product-card img {
+.hover-media {
+  position: relative;
+  display: block;
   aspect-ratio: 1 / 1;
-  object-fit: cover;
+  overflow: hidden;
+}
+
+.hover-media img {
+  position: absolute;
+  inset: 0;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.2s ease;
+}
+
+.hover-media img.rotate {
+  opacity: 0;
+}
+
+.hover-media:hover img.still {
+  opacity: 0;
+}
+
+.hover-media:hover img.rotate {
+  opacity: 1;
 }
 
 .product-card .card-body {
@@ -345,7 +417,7 @@ footer.site-footer img {
   align-items: start;
 }
 
-.product-detail img {
+.product-detail .hover-media {
   border-radius: 14px;
 }
 
