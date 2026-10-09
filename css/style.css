@@ -125,11 +125,6 @@ img, video {
 
 section {
   padding: 90px 0;
-  border-bottom: 1px solid var(--line);
-}
-
-section:last-of-type {
-  border-bottom: none;
 }
 
 .hero {
@@ -204,10 +199,8 @@ section:last-of-type {
   align-items: center;
 }
 
-.highlight-grid img {
+.highlight-grid .hover-media {
   border-radius: 12px;
-  width: 100%;
-  object-fit: cover;
 }
 
 .season-banner {
@@ -235,6 +228,7 @@ section:last-of-type {
   align-items: center;
   text-align: center;
   gap: 30px;
+  padding-bottom: 20px;
 }
 
 .value-prop img {
@@ -256,6 +250,7 @@ section:last-of-type {
 
 .partnership {
   text-align: center;
+  padding-top: 20px;
 }
 
 .partnership p {
